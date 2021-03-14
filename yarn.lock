@@ -6609,6 +6609,11 @@
   "resolved" "https://registry.npm.taobao.org/nan/download/nan-2.14.2.tgz"
   "version" "2.14.2"
 
+"nanoid@^3.1.21":
+  "integrity" "sha512-A6oZraK4DJkAOICstsGH98dvycPr/4GGDH7ZWKmMdd3vGcOurZ6JmWFUt0DA5bzrrn2FrUjmv6mFNWvv8jpppA=="
+  "resolved" "https://registry.npmjs.org/nanoid/-/nanoid-3.1.21.tgz"
+  "version" "3.1.21"
+
 "nanomatch@^1.2.9":
   "integrity" "sha1-uHqKpPwN6P5r6IiVs4mD/yZb0Rk="
   "resolved" "https://registry.npm.taobao.org/nanomatch/download/nanomatch-1.2.13.tgz"

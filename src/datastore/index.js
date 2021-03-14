@@ -2,6 +2,7 @@ import path from 'path'
 import fs from 'fs'
 import {remote} from 'electron'
 import low from 'lowdb'
+
 import FileSync from 'lowdb/adapters/FileSync'
 
 
@@ -20,5 +21,7 @@ if (fs.existsSync(userFilePath)) {
 
 const adapter = new FileSync(path.join(remote.app.getPath('userData'), '/db.json'))
 const db = low(adapter)
+
+
 
 export default db

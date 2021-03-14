@@ -1,7 +1,8 @@
 {
   "vegetables": [
     {
-      "name": "apple",
+      "id": 1,
+      "name": "Apfel",
       "type": "fruit",
       "season": {
         "fresh": [4,5,6,7],
@@ -9,178 +10,41 @@
       }
     },
     {
-      "name": "apple",
+      "id": 2,
+      "name": "Birne",
       "type": "fruit",
       "season": {
-        "fresh": [4,5,6,7],
-        "storage": [8,9,10,11]
+        "fresh": [6,7,8],
+        "storage": [9,10]
       }
     },
     {
-      "name": "apple",
+      "id": 3,
+      "name": "Salat",
       "type": "fruit",
       "season": {
-        "fresh": [4,5,6,7],
-        "storage": [8,9,10,11]
+        "fresh": [3,4,5,6,7,8,9],
+        "storage": []
       }
     },
     {
-      "name": "apple",
+      "id": 4,
+      "name": "Karotte",
       "type": "fruit",
       "season": {
-        "fresh": [4,5,6,7],
-        "storage": [8,9,10,11]
+        "fresh": [6,7],
+        "storage": [1,2,8,9,10,11,12]
       }
     },
     {
-      "name": "apple",
+      "id": 5,
+      "name": "Kartoffeln",
       "type": "fruit",
       "season": {
-        "fresh": [4,5,6,7],
-        "storage": [8,9,10,11]
-      }
-    },
-    {
-      "name": "apple",
-      "type": "fruit",
-      "season": {
-        "fresh": [4,5,6,7],
-        "storage": [8,9,10,11]
-      }
-    },
-    {
-      "name": "apple",
-      "type": "fruit",
-      "season": {
-        "fresh": [4,5,6,7],
-        "storage": [8,9,10,11]
-      }
-    },
-    {
-      "name": "apple",
-      "type": "fruit",
-      "season": {
-        "fresh": [4,5,6,7],
-        "storage": [8,9,10,11]
-      }
-    },
-    {
-      "name": "apple",
-      "type": "fruit",
-      "season": {
-        "fresh": [4,5,6,7],
-        "storage": [8,9,10,11]
-      }
-    },
-    {
-      "name": "apple",
-      "type": "fruit",
-      "season": {
-        "fresh": [4,5,6,7],
-        "storage": [8,9,10,11]
-      }
-    },
-    {
-      "name": "apple",
-      "type": "fruit",
-      "season": {
-        "fresh": [4,5,6,7],
-        "storage": [8,9,10,11]
-      }
-    },
-    {
-      "name": "apple",
-      "type": "fruit",
-      "season": {
-        "fresh": [4,5,6,7],
-        "storage": [8,9,10,11]
-      }
-    },
-    {
-      "name": "apple",
-      "type": "fruit",
-      "season": {
-        "fresh": [4,5,6,7],
-        "storage": [8,9,10,11]
-      }
-    },
-    {
-      "name": "apple",
-      "type": "fruit",
-      "season": {
-        "fresh": [4,5,6,7],
-        "storage": [8,9,10,11]
-      }
-    },
-    {
-      "name": "apple",
-      "type": "fruit",
-      "season": {
-        "fresh": [4,5,6,7],
-        "storage": [8,9,10,11]
-      }
-    },
-    {
-      "name": "apple",
-      "type": "fruit",
-      "season": {
-        "fresh": [4,5,6,7],
-        "storage": [8,9,10,11]
-      }
-    },
-    {
-      "name": "apple",
-      "type": "fruit",
-      "season": {
-        "fresh": [4,5,6,7],
-        "storage": [8,9,10,11]
-      }
-    },
-    {
-      "name": "apple",
-      "type": "fruit",
-      "season": {
-        "fresh": [4,5,6,7],
-        "storage": [8,9,10,11]
-      }
-    },
-    {
-      "name": "apple",
-      "type": "fruit",
-      "season": {
-        "fresh": [4,5,6,7],
-        "storage": [8,9,10,11]
-      }
-    },
-    {
-      "name": "apple",
-      "type": "fruit",
-      "season": {
-        "fresh": [4,5,6,7],
-        "storage": [8,9,10,11]
-      }
-    },
-    {
-      "name": "apple",
-      "type": "fruit",
-      "season": {
-        "fresh": [4,5,6,7],
-        "storage": [8,9,10,11]
-      }
-    },
-    {
-      "name": "apple",
-      "type": "fruit",
-      "season": {
-        "fresh": [4,5,6,7],
-        "storage": [8,9,10,11]
+        "fresh": [8,9],
+        "storage": [1,2,3,4,5,10,11,12]
       }
     }
-  ],
-  "lang_de": [
-    {
-      "name": "apple",
-      "translation": "Apfel"
-    }
+
   ]
 }

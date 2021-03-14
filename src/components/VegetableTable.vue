@@ -16,27 +16,29 @@
       <th>Oktober</th>
       <th>November</th>
       <th>Dezember</th>
+      <th v-if="!readOnly"></th>
     </tr>
     </thead>
     <tbody>
-    <tr v-for="vegetable in vegetables" :key="vegetable.name">
-      <td>{{ translation(vegetable.name) }}</td>
-      <td :class="isInSeasonFresh(vegetable, 1)  ? 'vegetable-table__season--fresh' : isInSeasonStorage(vegetable, 1) ? 'vegetable-table__season--storage' : ''"></td>
-      <td :class="isInSeasonFresh(vegetable, 2)  ? 'vegetable-table__season--fresh' : isInSeasonStorage(vegetable, 2) ? 'vegetable-table__season--storage' : ''"></td>
-      <td :class="isInSeasonFresh(vegetable, 3)  ? 'vegetable-table__season--fresh' : isInSeasonStorage(vegetable, 3) ? 'vegetable-table__season--storage' : ''"></td>
-      <td :class="isInSeasonFresh(vegetable, 4)  ? 'vegetable-table__season--fresh' : isInSeasonStorage(vegetable, 4) ? 'vegetable-table__season--storage' : ''"></td>
-      <td :class="isInSeasonFresh(vegetable, 5)  ? 'vegetable-table__season--fresh' : isInSeasonStorage(vegetable, 5) ? 'vegetable-table__season--storage' : ''"></td>
-      <td :class="isInSeasonFresh(vegetable, 6)  ? 'vegetable-table__season--fresh' : isInSeasonStorage(vegetable, 6) ? 'vegetable-table__season--storage' : ''"></td>
-      <td :class="isInSeasonFresh(vegetable, 7)  ? 'vegetable-table__season--fresh' : isInSeasonStorage(vegetable, 7) ? 'vegetable-table__season--storage' : ''"></td>
-      <td :class="isInSeasonFresh(vegetable, 8)  ? 'vegetable-table__season--fresh' : isInSeasonStorage(vegetable, 8) ? 'vegetable-table__season--storage' : ''"></td>
-      <td :class="isInSeasonFresh(vegetable, 9)  ? 'vegetable-table__season--fresh' : isInSeasonStorage(vegetable, 9) ? 'vegetable-table__season--storage' : ''"></td>
-      <td :class="isInSeasonFresh(vegetable, 10) ? 'vegetable-table__season--fresh' : isInSeasonStorage(vegetable, 10) ? 'vegetable-table__season--storage' : ''"></td>
-      <td :class="isInSeasonFresh(vegetable, 11) ? 'vegetable-table__season--fresh' : isInSeasonStorage(vegetable, 11) ? 'vegetable-table__season--storage' : ''"></td>
-      <td :class="isInSeasonFresh(vegetable, 12) ? 'vegetable-table__season--fresh' : isInSeasonStorage(vegetable, 12) ? 'vegetable-table__season--storage' : ''"></td>
+    <tr v-for="(vegetable) in vegetables" :key="vegetable.id">
+      <td>{{vegetable.name }}</td>
+      <td class="vegetable-table__cell" :class="[getSeasonClass(vegetable, 1), readOnly ? 'vegetable-table__cell--read-only' : '']" v-on:click="changeSeason(vegetable, 1)"></td>
+      <td class="vegetable-table__cell" :class="[getSeasonClass(vegetable, 2), readOnly ? 'vegetable-table__cell--read-only' : '']" v-on:click="changeSeason(vegetable, 2)"></td>
+      <td class="vegetable-table__cell" :class="[getSeasonClass(vegetable, 3), readOnly ? 'vegetable-table__cell--read-only' : '']" v-on:click="changeSeason(vegetable, 3)"></td>
+      <td class="vegetable-table__cell" :class="[getSeasonClass(vegetable, 4), readOnly ? 'vegetable-table__cell--read-only' : '']" v-on:click="changeSeason(vegetable, 4)"></td>
+      <td class="vegetable-table__cell" :class="[getSeasonClass(vegetable, 5), readOnly ? 'vegetable-table__cell--read-only' : '']" v-on:click="changeSeason(vegetable, 5)"></td>
+      <td class="vegetable-table__cell" :class="[getSeasonClass(vegetable, 6), readOnly ? 'vegetable-table__cell--read-only' : '']" v-on:click="changeSeason(vegetable, 6)"></td>
+      <td class="vegetable-table__cell" :class="[getSeasonClass(vegetable, 7), readOnly ? 'vegetable-table__cell--read-only' : '']" v-on:click="changeSeason(vegetable, 7)"></td>
+      <td class="vegetable-table__cell" :class="[getSeasonClass(vegetable, 8), readOnly ? 'vegetable-table__cell--read-only' : '']" v-on:click="changeSeason(vegetable, 8)"></td>
+      <td class="vegetable-table__cell" :class="[getSeasonClass(vegetable, 9), readOnly ? 'vegetable-table__cell--read-only' : '']" v-on:click="changeSeason(vegetable, 9)"></td>
+      <td class="vegetable-table__cell" :class="[getSeasonClass(vegetable, 10), readOnly ? 'vegetable-table__cell--read-only' : '']" v-on:click="changeSeason(vegetable, 10)"></td>
+      <td class="vegetable-table__cell" :class="[getSeasonClass(vegetable, 11), readOnly ? 'vegetable-table__cell--read-only' : '']" v-on:click="changeSeason(vegetable, 11)"></td>
+      <td class="vegetable-table__cell" :class="[getSeasonClass(vegetable, 12), readOnly ? 'vegetable-table__cell--read-only' : '']" v-on:click="changeSeason(vegetable, 12)"></td>
+      <td v-if="!readOnly"><button v-on:click="remove(vegetable.id)">Löschen</button></td>
     </tr>
     </tbody>
   </table>
-  <button v-on:click="addVegetable()">Hinzufügen</button>
+  <button v-if="!readOnly" v-on:click="add()">Neues Gemüse/Obst hinzufügen</button>
   </div>
 </template>
 
@@ -44,51 +46,82 @@
 
 export default {
   name: 'VegetableTable',
-  props: {},
+  props: ['readOnly'],
   data: function () {
     return {
-      vegetables: [],
-      translations: [],
-      lang: 'de',
+      editRowId: undefined,
+      lastChanged: Date.now()
     }
 
   },
-  created() {
-    console.log(this.$db.get('vegetables').value())
-    this.vegetables = this.$db.get('vegetables').value();
-    this.translations = this.$db.get('lang_' + this.lang).value();
+  computed: {
+    // That's where the magic happens. Even though only the last
+    // statement, `lowdb` is returned, `this.lastChanged` is now tracked by Vue
+    // as a dependency of `this.db`. When this.lastChanged changes, `this.db`
+    // will update wherever it is used in the Vue instance
+    db () {
+      return this.lastChanged, this.$db
+    },
+    vegetables () {
+      return this.db.get('vegetables')
+    },
+    //editName() {
+      //this.vegetables.find({id: this.editRowId}).assign({name: })
+     // this.update()
+    //}
   },
   methods: {
-    async addVegetable() {
-      const newEntry = {"name": "Neu", "type": "fruit", "season": {"fresh": [], "storage": []}}
-      this.$db.get('vegetables')
+    update () {
+      this.lastChanged = Date.now()
+    },
+    add() {
+      const newEntry = {"id": this.$nanoid(), "name": "Neu", "type": "fruit", "season": {"fresh": [], "storage": []}}
+      this.vegetables
           .push(newEntry)
           .write()
-          .then(() => {
-            this.vegetables.push(newEntry)
-          })
+      // When you are done, trigger an update
+      this.update()
+    },
+    remove(id) {
+      this.vegetables.remove({ id: id }).write()
+      this.update()
+    },
+    getSeasonFresh(vegetable) {
+      return this.vegetables.find({id: vegetable.id}).get('season').get('fresh')
+    },
+    getSeasonStorage(vegetable) {
+      return this.vegetables.find({id: vegetable.id}).get('season').get('storage')
+    },
+    changeSeason(vegetable, month) {
+      if (this.readOnly) {
+        return;
+      }
+      if (!vegetable.season.fresh.includes(month) && !vegetable.season.storage.includes(month)) {
+        console.log('change to fresh')
+        this.getSeasonFresh(vegetable).push(month).write()
+      } else if (vegetable.season.fresh.includes(month)) {
+        console.log('change to storage')
+        this.getSeasonStorage(vegetable).push(month).write()
+        this.getSeasonFresh(vegetable).pull(month).write()
+      } else if (vegetable.season.storage.includes(month)) {
+        console.log('change to not available')
+        this.getSeasonStorage(vegetable).pull(month).write()
+      }
+      this.update()
     },
     isInSeasonFresh(vegetable, month) {
-      console.log(vegetable)
-      if (vegetable.season && vegetable.season.fresh) {
-        return vegetable.season.fresh.includes(month)
-      }
-      return false
+      return vegetable.season.fresh.includes(month)
     },
     isInSeasonStorage(vegetable, month) {
-      if (vegetable.season && vegetable.season.storage) {
-        return vegetable.season.storage.includes(month)
-      }
-      return false
+      return vegetable.season.storage.includes(month)
     },
-    translation(name) {
-      let foundTranslation = this.translations.find(o => o.name === name)
-      if (foundTranslation) {
-        return foundTranslation.translation
-      }
-      return name
+    getSeasonClass(vegetable, month) {
+      return this.isInSeasonFresh(vegetable, month)  ? 'vegetable-table__season--fresh' : this.isInSeasonStorage(vegetable, month) ? 'vegetable-table__season--storage' : '';
+    },
+    editRow(index) {
+      this.editRowId = index
     }
-  }
+  },
 }
 </script>
 
@@ -96,6 +129,12 @@ export default {
 <style scoped>
 .vegetable-table__table, th, td {
   border: black solid 1px;
+}
+.vegetable-table__cell {
+  cursor: pointer;
+}
+.vegetable-table__cell--read-only {
+  cursor: auto;
 }
 .vegetable-table__season--fresh {
   background-color: green;

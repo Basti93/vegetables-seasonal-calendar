@@ -1,28 +1,18 @@
 <template>
   <div id="app">
-    <h1>Marktschwärmer Saisonkalender Wizard</h1>
-    <VegetableTable />
-    <button v-on:click="openPrintWindow">Drucken</button>
+    <h1>Marktschwärmer Saisonkalender Druck</h1>
+    <VegetableTable read-only="true" />
   </div>
 </template>
 
 <script>
-import VegetableTable from './components/VegetableTable.vue'
-import { ipcRenderer } from 'electron'
+import VegetableTable from '../components/VegetableTable.vue'
 
 export default {
   name: 'App',
   components: {
     VegetableTable
   },
-  created() {
-    console.log('created ')
-  },
-  methods: {
-    openPrintWindow() {
-      ipcRenderer.send('open-print-view');
-    }
-  }
 }
 </script>
 
