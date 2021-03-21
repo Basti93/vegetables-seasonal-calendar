@@ -1,8 +1,11 @@
 'use strict'
 
-import { app, protocol, BrowserWindow, ipcMain } from 'electron'
+import { app, protocol, BrowserWindow, ipcMain, shell } from 'electron'
 import { createProtocol } from 'vue-cli-plugin-electron-builder/lib'
 import installExtension, { VUEJS_DEVTOOLS } from 'electron-devtools-installer'
+import path from "path";
+import os from "os";
+import fs from "fs";
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
 // Scheme must be registered before the app is ready
@@ -15,6 +18,7 @@ async function createWindow() {
   const win = new BrowserWindow({
     width: 1200,
     height: 800,
+    backgroundColor: '#ffd100',
     title: "Marktschwärmer Saisonkalender Wizard",
     webPreferences: {
       
@@ -42,6 +46,7 @@ async function createWindowPrint() {
   const win = new BrowserWindow({
     width: 1200,
     height: 800,
+    backgroundColor: '#ffd100',
     title: "Marktschwärmer Saisonkalender",
     webPreferences: {
 
@@ -50,6 +55,23 @@ async function createWindowPrint() {
       nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION,
       enableRemoteModule: true
     }
+  })
+
+  win.webContents.on('did-finish-load', () => {
+    console.log("did finish")
+    // Use default printing options
+    win.webContents.printToPDF({
+          printBackground: true,marginsType: 1,pageSize: 'A4'
+        }
+    ).then(data => {
+      const pdfPath = path.join(os.homedir(), 'Desktop', 'temp.pdf')
+      fs.writeFile(pdfPath, data, (error) => {
+        if (error) throw error
+        console.log(`Wrote PDF successfully to ${pdfPath}`)
+      })
+    }).catch(error => {
+      console.log(`Failed to write PDF to ${pdfPath}: `, error)
+    })
   })
 
   if (process.env.WEBPACK_DEV_SERVER_URL) {
@@ -61,6 +83,7 @@ async function createWindowPrint() {
     // Load the index.html when not in development
     win.loadURL('app://./print.html')
   }
+
 
 }
 
@@ -113,3 +136,4 @@ if (isDevelopment) {
     })
   }
 }
+

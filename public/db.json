@@ -1,50 +1,880 @@
 {
+  "title": "Saisonkalender Obst/Gemüse",
+  "subheadline": "Landau an der Isar",
   "vegetables": [
     {
       "id": 1,
-      "name": "Apfel",
+      "name": "Äpfel",
       "type": "fruit",
       "season": {
-        "fresh": [4,5,6,7],
-        "storage": [8,9,10,11]
+        "fresh": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "storage": [
+          1,
+          2,
+          3,
+          12
+        ]
       }
     },
     {
       "id": 2,
-      "name": "Birne",
+      "name": "Birnen",
       "type": "fruit",
       "season": {
-        "fresh": [6,7,8],
-        "storage": [9,10]
+        "fresh": [
+          8,
+          9
+        ],
+        "storage": [
+          1,
+          10,
+          12,
+          11
+        ]
       }
     },
     {
       "id": 3,
-      "name": "Salat",
+      "name": "Heidelbeeren",
       "type": "fruit",
       "season": {
-        "fresh": [3,4,5,6,7,8,9],
-        "storage": []
+        "fresh": [
+          9,
+          8
+        ],
+        "storage": [
+          10,
+          11,
+          12
+        ]
       }
     },
     {
       "id": 4,
-      "name": "Karotte",
+      "name": "Süßkirschen",
       "type": "fruit",
       "season": {
-        "fresh": [6,7],
-        "storage": [1,2,8,9,10,11,12]
+        "fresh": [
+          6,
+          7
+        ],
+        "storage": []
       }
     },
     {
       "id": 5,
+      "name": "Asia-Salate",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          1,
+          2,
+          3,
+          12
+        ],
+        "storage": []
+      }
+    },
+    {
+      "id": "G9_FPwocEIPd1i38r1Bw5",
+      "name": "Auberginen",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "storage": []
+      }
+    },
+    {
+      "id": "O9ROBCSJVRT0cjicJueP0",
+      "name": "Babyspinat",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "storage": [
+          12
+        ]
+      }
+    },
+    {
+      "id": "SngEmvt1kiVcLka2ECMEj",
+      "name": "Blaukraut/Rotkohl",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "storage": [
+          1,
+          2,
+          3,
+          12
+        ]
+      }
+    },
+    {
+      "id": "Mzu8KFa812y9vVUWYu_d4",
+      "name": "Blumenkohl",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "storage": []
+      }
+    },
+    {
+      "id": "l3nSl0mw9HQc4iI_9lCtu",
+      "name": "Brokkoli",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "storage": []
+      }
+    },
+    {
+      "id": "5D7DhlyFwuy8r0rWEiqN5",
+      "name": "Bundzwiebel",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          6,
+          7
+        ],
+        "storage": []
+      }
+    },
+    {
+      "id": "9Id4_roronFy4-vcjrCPp",
+      "name": "Chinakohl grün",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          8,
+          9,
+          10
+        ],
+        "storage": [
+          1,
+          2,
+          3,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "id": "DJkL6k7CkEBceYgs-uvoq",
+      "name": "Chinakohl rot",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          8,
+          9,
+          10
+        ],
+        "storage": [
+          1,
+          2,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "id": "DIR_Co1H-kTk-7AmVcE9z",
+      "name": "Endivien",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          1,
+          2,
+          10,
+          11,
+          12
+        ],
+        "storage": []
+      }
+    },
+    {
+      "id": "t6Dg5sSqKwtSRAU-TVOmJ",
+      "name": "Feldsalat",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          1,
+          2,
+          3,
+          10,
+          11,
+          12
+        ],
+        "storage": []
+      }
+    },
+    {
+      "id": "WcbYf_UmKqzWXasN6dUot",
+      "name": "Gemüseziebel",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "storage": [
+          1,
+          2,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "id": "YbiDhWroZufEagNIUP-Kl",
+      "name": "Grünkühl",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          1,
+          12
+        ],
+        "storage": []
+      }
+    },
+    {
+      "id": "f3TSjD2MThkr-RQooyHUh",
+      "name": "Grünspargel",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          4,
+          5,
+          6
+        ],
+        "storage": []
+      }
+    },
+    {
+      "id": "aKuIO6hQSb1OF1oPpX-K5",
+      "name": "Gurken",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "storage": []
+      }
+    },
+    {
+      "id": "kK8B0LEFs_XpUBFFl9y38",
+      "name": "Hanfsamen",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          9
+        ],
+        "storage": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "id": "LLGgW9g1MnDHN4wTzD2Gi",
+      "name": "Käferbohnen",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          11
+        ],
+        "storage": [
+          12,
+          10,
+          9,
+          8,
+          6,
+          7,
+          4,
+          5,
+          2,
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "id": "YETgESzJjovDSIMo6o1mT",
+      "name": "Karotten",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "storage": [
+          1,
+          2,
+          3,
+          12
+        ]
+      }
+    },
+    {
+      "id": "LKkP19r69G0KksOTZ2Exz",
       "name": "Kartoffeln",
       "type": "fruit",
       "season": {
-        "fresh": [8,9],
-        "storage": [1,2,3,4,5,10,11,12]
+        "fresh": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "storage": [
+          1,
+          2,
+          4,
+          3,
+          5,
+          12
+        ]
+      }
+    },
+    {
+      "id": "Zdq4iwdYz9cHktlUhmfjD",
+      "name": "Knoblauch",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          6,
+          7
+        ],
+        "storage": [
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "id": "6_Pq9_NRwoU8QE8Aozxrs",
+      "name": "Kräuter",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "storage": []
+      }
+    },
+    {
+      "id": "FtxxUCcnCCa_SPFNPIFAo",
+      "name": "Kürbisse",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          8,
+          7,
+          9
+        ],
+        "storage": [
+          1,
+          10,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "id": "wwyO0neLxVkgvgSnR0yRc",
+      "name": "Lauch",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "storage": [
+          1,
+          2,
+          3,
+          12
+        ]
+      }
+    },
+    {
+      "id": "jNXekOW30aUyb2a4rplot",
+      "name": "Paprika",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "storage": []
+      }
+    },
+    {
+      "id": "SkfCOaAwiGSOHb76fEE9j",
+      "name": "Pastinaken",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          8,
+          9,
+          10
+        ],
+        "storage": [
+          1,
+          2,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "id": "sHsjE8NzGswogKlQYXdcV",
+      "name": "Petersilienwurzeln",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          8,
+          9,
+          10
+        ],
+        "storage": [
+          1,
+          2,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "id": "y-ITtGMes9jG-3VoqcSbX",
+      "name": "Radi schwarz",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          9,
+          10
+        ],
+        "storage": [
+          1,
+          2,
+          3,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "id": "uEYU5tnkN_rwBcYFq2AS2",
+      "name": "Radi weiß",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "storage": [
+          1,
+          2,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "id": "0q-spnXBBlhd4THV1gmMd",
+      "name": "Radieschen",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "storage": []
+      }
+    },
+    {
+      "id": "fKLcz9cAB03_cufRoewrn",
+      "name": "Rhabarber",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          4,
+          5,
+          6
+        ],
+        "storage": []
+      }
+    },
+    {
+      "id": "iNsjX9kpgh6IywW1ZG71G",
+      "name": "Rote Beete",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "storage": [
+          1,
+          2,
+          3,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "id": "gnQwePng0jwEkT_qnBrvY",
+      "name": "Rucola",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "storage": []
+      }
+    },
+    {
+      "id": "Czc1hMs3loxrBo0GXSRaF",
+      "name": "Salat",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          3,
+          4,
+          6,
+          5,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "storage": []
+      }
+    },
+    {
+      "id": "8EqzOswEmFfHNw_0gPyN7",
+      "name": "Schlangengurken",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          5,
+          7,
+          6,
+          8,
+          9,
+          10,
+          11
+        ],
+        "storage": []
+      }
+    },
+    {
+      "id": "bWg_KurKZkBl4laywVo1K",
+      "name": "Sellerie",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "storage": [
+          2,
+          3,
+          4,
+          5,
+          1,
+          12
+        ]
+      }
+    },
+    {
+      "id": "DLhFH-mln5k1ZCnwGVh0h",
+      "name": "Speiserüben",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          10,
+          9,
+          8
+        ],
+        "storage": [
+          1,
+          2,
+          12,
+          11
+        ]
+      }
+    },
+    {
+      "id": "VKLA3tfd322Q2V9bntObH",
+      "name": "Spitzkohl",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "storage": []
+      }
+    },
+    {
+      "id": "xU78cIRmMolR4b1OGPU4_",
+      "name": "Tomaten",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          5,
+          6,
+          8,
+          7,
+          9,
+          10,
+          11
+        ],
+        "storage": []
+      }
+    },
+    {
+      "id": "5Fj8plBQL1y62aCtKRyUG",
+      "name": "Weißkohl",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          5,
+          7,
+          6,
+          8,
+          9,
+          10,
+          11
+        ],
+        "storage": [
+          1,
+          2,
+          3,
+          12
+        ]
+      }
+    },
+    {
+      "id": "PK-oqFXXWUpLBzc73nl8o",
+      "name": "Wirsing",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          10,
+          9,
+          8
+        ],
+        "storage": [
+          1,
+          2,
+          12,
+          11
+        ]
+      }
+    },
+    {
+      "id": "g67DHXpDbGMbiMYeaW1rV",
+      "name": "Wurzelspinat",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          4,
+          6,
+          5,
+          7,
+          8,
+          9,
+          10
+        ],
+        "storage": []
+      }
+    },
+    {
+      "id": "S65UwCwawgQWEmAQzvM7H",
+      "name": "Zucchini",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          4,
+          6,
+          5,
+          7,
+          8,
+          9,
+          10
+        ],
+        "storage": []
+      }
+    },
+    {
+      "id": "vpky7ShSmArY8biu-05X0",
+      "name": "Zuckerhut",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          9,
+          10
+        ],
+        "storage": [
+          1,
+          2,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "id": "Ty7oFBhLSsqwr-FeYIuhR",
+      "name": "Zuckermais",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "storage": []
+      }
+    },
+    {
+      "id": "qpUF1XMSywTN8TU9ygztU",
+      "name": "Zwiebeln",
+      "type": "fruit",
+      "season": {
+        "fresh": [
+          7,
+          8,
+          9
+        ],
+        "storage": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          10,
+          12,
+          11
+        ]
       }
     }
-
   ]
 }

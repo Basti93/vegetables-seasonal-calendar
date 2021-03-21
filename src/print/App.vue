@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <h1>Marktschwärmer Saisonkalender Druck</h1>
     <VegetableTable read-only="true" />
   </div>
 </template>
@@ -25,4 +24,5 @@ export default {
   background-color: #ffd100;
   margin-top: 60px;
 }
+
 </style>

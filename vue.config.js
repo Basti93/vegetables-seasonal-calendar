@@ -8,4 +8,5 @@ module.exports = {
         index: 'src/main.js',
         print: 'src/print/main.js'
     }
+
 }

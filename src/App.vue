@@ -1,8 +1,11 @@
 <template>
   <div id="app">
-    <h1>Marktschwärmer Saisonkalender Wizard</h1>
     <VegetableTable />
-    <button v-on:click="openPrintWindow">Drucken</button>
+    <p>Zum editieren der Verfügbarkeit einfach in die Zellen klicken</p>
+    <p>
+    <button v-on:click="openPrintWindow"><font-awesome-icon icon="print" />&nbsp;Druckvorschau</button>
+    </p>
+    <p>© Sebastian Binder - 2021 - <a title="Zum Code" href="http://github.com/Basti93/vegetables-seasonal-calendar">Github</a></p>
   </div>
 </template>
 
@@ -34,5 +37,7 @@ export default {
   text-align: center;
   background-color: #ffd100;
   margin-top: 60px;
+
 }
+
 </style>
